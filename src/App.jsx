@@ -9,17 +9,22 @@ import { VscFileSubmodule } from "react-icons/vsc";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { TbMath } from "react-icons/tb";
 import { IoLogoLinkedin } from "react-icons/io";
-import { FaSquareInstagram } from "react-icons/fa6";
-import { FaSquareWhatsapp } from "react-icons/fa6";
-import { FaSquareGithub } from "react-icons/fa6";
+import { FaSquareInstagram, FaSquareWhatsapp, FaSquareGithub } from "react-icons/fa6";
+
+import { Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Base from "./Pages/base";
+import Babylonian from "./Pages/babylion";
+import Weeks from "./Pages/week";
 
 function App() {
 
 
   return (
     <>
+
       <div className="flex relative w-screen justify-center items-center px-36 py-16 h-screen ">
-        <video autoPlay loop muted playsInline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-0">
           <source src="../public/background.webm" type="video/webm" />
         </video>
         <div className="relative z-100 w-full bg-white/30 backdrop-blur-sm border-black/30 border-1 rounded-4xl h-[calc(100vh-7.5rem)] shadow-[0_20px_40px_0_rgba(0,0,0,0.25)]">
@@ -54,20 +59,20 @@ function App() {
                 <h3 className="pl-2 text-sm pt-4 font-semibold text-gray-300">Locations</h3>
                 <ul className="flex flex-col gap-1 pl-1">
                   <li>
-                    <a href="#"
+                    <Link to="/weeks"
                       className="flex items-center text-[1rem] font-semibold p-1 gap-2 text-gray-900 transition-all duration-700 hover:bg-blue-50/50 hover:cursor-pointer rounded-xl pl-2"
                     >
                       <MdOutlineCalendarMonth />
                       Days of the Week
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#"
+                    <Link to="/babylonian"
                       className="flex items-center text-[1rem] font-semibold p-1 gap-2 text-gray-900 transition-all duration-700 hover:bg-blue-50/50 hover:cursor-pointer rounded-xl pl-2"
                     >
                       <TbMath />
                       Babylonian Method
-                    </a>
+                    </Link>
                   </li>
                 </ul>
                 <h3 className="pl-2 text-sm pt-4 font-semibold text-gray-300">Contact Me</h3>
@@ -141,15 +146,11 @@ function App() {
               <div className="flex h-[calc(100vh-15.4rem)] gap-4 ">
                 {/*CONTENIDO*/}
                 <div className="flex-8/10  ">
-                  <div className="border-b-1 border-black/30 py-2 px-4">
-                    <p>Week of the Days.jsx</p>
-                  </div>
-                  <div className="bg-white/30 border-b-1 border-black/30 py-2 px-4">
-                    <p>Babylonian Method.jsx</p>
-                  </div>
-                  
-                  
-                  
+                  <Routes>
+                    <Route path="/" element={<Base />} />
+                    <Route path="/babylonian" element={<Babylonian />} />
+                    <Route path="/weeks" element={<Weeks />} />
+                  </Routes>
                 </div>
               </div>
             </div>
