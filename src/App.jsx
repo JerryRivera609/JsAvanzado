@@ -9,6 +9,7 @@ import { VscFileSubmodule } from "react-icons/vsc";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { TbMath } from "react-icons/tb";
 import { IoLogoLinkedin } from "react-icons/io";
+import { TiHome } from "react-icons/ti";
 import { FaSquareInstagram, FaSquareWhatsapp, FaSquareGithub } from "react-icons/fa6";
 
 import { Routes, Route } from "react-router-dom";
@@ -58,6 +59,14 @@ function App() {
                 <h3 className="pl-2 text-sm pt-4 font-semibold text-gray-300">Favourites</h3>
                 <h3 className="pl-2 text-sm pt-4 font-semibold text-gray-300">Locations</h3>
                 <ul className="flex flex-col gap-1 pl-1">
+                <li>
+                    <Link to="/"
+                      className="flex items-center text-[1rem] font-semibold p-1 gap-2 text-gray-900 transition-all duration-700 hover:bg-blue-50/50 hover:cursor-pointer rounded-xl pl-2"
+                    >
+                      <TiHome />
+                      Home
+                    </Link>
+                  </li>
                   <li>
                     <Link to="/weeks"
                       className="flex items-center text-[1rem] font-semibold p-1 gap-2 text-gray-900 transition-all duration-700 hover:bg-blue-50/50 hover:cursor-pointer rounded-xl pl-2"
@@ -117,9 +126,9 @@ function App() {
               </div>
             </div>
 
-            <div className=" flex-8/10 justify-between items-center">
+            <div className=" flex-8/10 justify-center w-full items-center">
               <header className="flex justify-between border-b-1 border-black/30 px-6">
-                <div className="pb-4" >
+                <div className="pb-4 w-full text-center" >
                   <h1 className="text-2xl">Java Script Avanzado</h1>
                   <div className="flex justify-center text-xl gap-1">
                     <RiJavascriptFill className="text-[#F7DF1E] transition-all duration-500 hover:scale-155" />
@@ -129,18 +138,7 @@ function App() {
                     <FaVuejs className="text-[#42B883] transition-all duration-500 hover:scale-155" />
                   </div>
                 </div>
-                <div>
-                  <div className="bg-black/20 p-1 rounded-md gap-1 flex">
-                    <button className="bg-white p-2 rounded-md flex items-center gap-1">
-                      <CiLight className="text-xl" />
-                      Light
-                    </button>
-                    <button className="bg-white p-2 rounded-md flex items-center gap-1">
-                      <CiDark className="text-xl" />
-                      Dark
-                    </button>
-                  </div>
-                </div>
+                
               </header>
 
               <div className="flex h-[calc(100vh-15.4rem)] gap-4 ">
