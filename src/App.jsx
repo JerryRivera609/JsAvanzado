@@ -26,7 +26,7 @@ function App() {
 
       <div className="flex relative w-screen justify-center items-center px-36 py-16 h-screen ">
         <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-0">
-          <source src="../public/background.webm" type="video/webm" />
+          <source src="/background.webm" type="video/webm" />
         </video>
         <div className="relative z-100 w-full bg-white/30 backdrop-blur-sm border-black/30 border-1 rounded-4xl h-[calc(100vh-7.5rem)] shadow-[0_20px_40px_0_rgba(0,0,0,0.25)]">
 
